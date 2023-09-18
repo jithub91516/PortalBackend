@@ -1,0 +1,4 @@
+test:
+  - mail: 1
+  - sms: 2
+  - ticket: 3

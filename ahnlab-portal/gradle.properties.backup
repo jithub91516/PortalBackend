@@ -1,0 +1,14 @@
+systemProp.http.proxyHost=proxy.ahnlab.co.kr
+systemProp.http.proxyPort=3128
+systemProp.http.nonProxyHosts=172.21.30.190|abis.ahnlab.com|*.ahnlab.com
+systemProp.https.proxyHost=proxy.ahnlab.co.kr
+systemProp.https.proxyPort=3128
+
+artifactory_user=jusung.park
+artifactory_password=
+mavenUrl=https://abis.ahnlab.com/artifactory/maven-repos
+ABIS_MAVEN_URL=https://abis.ahnlab.com/artifactory/maven-repos
+artifactory_gradlePluginUrl=https://abis.ahnlab.com/artifactory/gradle-repos
+artifactory_contextBaseUrl=https://abis.ahnlab.com/artifactory
+docker_registry_url=abis.ahnlab.com
+
