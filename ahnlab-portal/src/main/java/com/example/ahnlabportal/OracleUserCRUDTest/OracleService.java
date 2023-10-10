@@ -8,10 +8,10 @@ import org.springframework.core.ResolvableType;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -27,6 +27,21 @@ public class OracleService {
         EmpOption test3 = binder.getProperty("test", EmpOption.class);
 
         return null;
+    }
+
+    public Date getDateFromat(String date)throws Exception{
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+        sdf.setTimeZone(TimeZone.getTimeZone("Asia/Seoul"));
+        Date res = sdf.parse(date);
+        return res;
+    }
+
+    public int getTimestampDate(Date date){
+        int reVal = 0;
+        Timestamp time = new Timestamp(date.getTime());
+        reVal = Integer.parseInt(Long.toString(time.getTime() / 1000));
+
+        return reVal;
     }
 
 }
